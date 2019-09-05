@@ -232,6 +232,7 @@ html {
 
         &__item {
             width: 30%;
+            position: relative;
 
             &__pic {
                 display: block;
@@ -248,6 +249,7 @@ html {
                 box-shadow: 10px 10px 0px 0px $turquise;
 
                 .hidden__block {
+                    @include positioning($top: 0, $right: 0, $left: 0, $bottom: 0);
                     @include bg-gradient;
                 }
             }
@@ -409,6 +411,7 @@ html {
 
             &__block {
                 width: 100%;
+                position: relative;
 
                 &:hover {
                     position: relative;
@@ -492,7 +495,7 @@ html {
             }
 
             .hidden__block {
-                @include positioning($top:0, $right: 0, $bottom: 0, $left: 0);
+                // @include positioning($top:0, $right: 0, $bottom: 0, $left: 0);
                 @include flex-description($direction: column, $justify: center, $align: center);
                 @include font-styling($color: $base, $family: $regular-bold, $line-height: 2);
                 opacity: 0;
